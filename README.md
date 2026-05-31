@@ -38,13 +38,10 @@ O projeto inclui alto contraste, ajuste de fonte, botão para voltar ao topo, fo
 Os textos são autorais. A imagem do mapa simbólico em SVG é própria e foi criada para o projeto, podendo ser substituída por uma arte feita no Canva, Paint, Piskel ou outro editor próprio.
 
 ## Dados do projeto
-Nome: [SEU NOME AQUI]
-Turma: [SUA TURMA AQUI]
-Escola: [NOME DA ESCOLA AQUI]
-Professor(a): [NOME DO PROFESSOR AQUI]
-
-## Link do projeto
-GitHub Pages ou Vercel: [COLE O LINK AQUI]
+Nome: Daniel Nadalin
+Turma: 3 ano ``
+Escola: Colégio Estadual Padre Cláudio Morelli
+Professor(a): Rafael dos Santos Biano
 
 ## Copyright
 © 2026 — Todos os direitos reservados.
