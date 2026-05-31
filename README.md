@@ -28,15 +28,6 @@ O site apresenta a experiência "Ecossistema Interativo da Propriedade", em que 
 1. Baixe ou clone o repositório.
 2. Abra o arquivo index.html no navegador.
 
-## Estrutura de arquivos
-/
-├── index.html
-├── style.css
-├── script.js
-├── README.md
-├── img/
-└── assets/
-
 ## Responsividade
 O site usa Media Queries para se adaptar a computador, tablet e celular. O layout muda de colunas para blocos empilhados em telas menores, o menu vira hambúrguer e a trilha da polinização permite navegação horizontal quando necessário.
 
