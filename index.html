@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Colmeia Viva: painel interativo sobre abelhas, produção agrícola e preservação ambiental.">
+  <title>Colmeia Viva</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header" id="inicio">
+    <a class="brand" href="#inicio" aria-label="Colmeia Viva, voltar ao início">
+      <span class="brand-title">Colmeia Viva</span>
+      <span class="brand-subtitle">Apicultura, agricultura e preservação em equilíbrio</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="main-menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="main-nav" id="main-menu" aria-label="Menu principal">
+      <a href="#inicio">Início</a>
+      <a href="#conexao">Conexão</a>
+      <a href="#riscos">Riscos</a>
+      <a href="#ecossistema">Ecossistema</a>
+      <a href="#polinizacao">Polinização</a>
+      <a href="#manual">Manual</a>
+      <a href="#projeto">Projeto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="opening" aria-labelledby="titulo-abertura">
+      <div class="opening-map">
+        <img src="img/mapa-colmeia-viva.svg" alt="Mapa simbólico conectando colmeia, lavoura e área preservada.">
+      </div>
+      <div class="opening-content">
+        <p class="signature">Painel interativo sobre abelhas, produção agrícola e preservação ambiental</p>
+        <h1 id="titulo-abertura">Sem polinizadores, o campo perde parte da sua força.</h1>
+        <p>A apicultura integrada à agricultura mostra que produzir e preservar não precisam ser caminhos opostos. Quando abelhas, lavouras e áreas naturais convivem em equilíbrio, a produção se fortalece e o ambiente também.</p>
+        <div class="markers" aria-label="Marcadores do projeto">
+          <span>Polinização</span>
+          <span>Biodiversidade</span>
+          <span>Produção</span>
+          <span>Preservação</span>
+          <span>Manejo responsável</span>
+        </div>
+        <div class="hero-actions">
+          <a class="button primary" href="#conexao">Entender a conexão</a>
+          <a class="button secondary" href="#ecossistema">Explorar a propriedade</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ecosystem-lab" id="ecossistema" aria-labelledby="titulo-ecossistema">
+      <div class="ecosystem-copy">
+        <div class="section-label">Experiência principal</div>
+        <h2 id="titulo-ecossistema">Ecossistema Interativo da Propriedade</h2>
+        <p>Monte uma propriedade rural viva tocando nos elementos do ambiente. Cada escolha altera as conexões entre colmeias, flores, lavoura, água, mata nativa, biodiversidade e comunidade.</p>
+      </div>
+
+      <div class="ecosystem-stage" id="ecosystem-stage" aria-live="polite">
+        <div class="sky-band"></div>
+        <div class="sun-disc" aria-hidden="true"></div>
+        <div class="hills" aria-hidden="true"></div>
+        <div class="soil-band" aria-hidden="true"></div>
+        <div class="connection-field" aria-hidden="true">
+          <span class="connection connection-bees-flowers" data-link="bees-flowers"></span>
+          <span class="connection connection-flowers-crops" data-link="flowers-crops"></span>
+          <span class="connection connection-water-flowers" data-link="water-flowers"></span>
+          <span class="connection connection-forest-water" data-link="forest-water"></span>
+          <span class="connection connection-forest-biodiversity" data-link="forest-biodiversity"></span>
+          <span class="connection connection-community-all" data-link="community-all"></span>
+        </div>
+
+        <button class="eco-node node-bees" type="button" data-node="bees" aria-pressed="true">
+          <span class="node-art hive-art"><i></i><i></i><i></i></span>
+          <strong>Abelhas</strong>
+        </button>
+        <button class="eco-node node-flowers" type="button" data-node="flowers" aria-pressed="true">
+          <span class="node-art flower-art"><i></i><i></i><i></i><i></i><i></i></span>
+          <strong>Flores</strong>
+        </button>
+        <button class="eco-node node-crops" type="button" data-node="crops" aria-pressed="true">
+          <span class="node-art crop-art"><i></i><i></i><i></i><i></i></span>
+          <strong>Agricultura</strong>
+        </button>
+        <button class="eco-node node-water" type="button" data-node="water" aria-pressed="true">
+          <span class="node-art water-art"><i></i><i></i></span>
+          <strong>Água</strong>
+        </button>
+        <button class="eco-node node-forest" type="button" data-node="forest" aria-pressed="true">
+          <span class="node-art forest-art"><i></i><i></i><i></i></span>
+          <strong>Mata nativa</strong>
+        </button>
+        <button class="eco-node node-biodiversity" type="button" data-node="biodiversity" aria-pressed="true">
+          <span class="node-art biodiversity-art"><i></i><i></i><i></i></span>
+          <strong>Biodiversidade</strong>
+        </button>
+        <button class="eco-node node-community" type="button" data-node="community" aria-pressed="true">
+          <span class="node-art community-art"><i></i><i></i><i></i></span>
+          <strong>Comunidade</strong>
+        </button>
+
+        <div class="bee-flight" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <div class="ecosystem-dashboard">
+        <article class="ecosystem-status">
+          <h3 id="ecosystem-title">Propriedade integrada em equilíbrio</h3>
+          <p id="ecosystem-message">Com colmeias, flores, lavoura, água limpa, mata nativa, biodiversidade e participação da comunidade, a propriedade ganha estabilidade ambiental e produtiva.</p>
+        </article>
+        <div class="eco-indicators" aria-label="Indicadores dinâmicos do ecossistema">
+          <div class="eco-meter">
+            <div><span>Polinização</span><strong id="meter-pollination">100%</strong></div>
+            <span class="eco-track"><i id="fill-pollination"></i></span>
+          </div>
+          <div class="eco-meter">
+            <div><span>Produção agrícola</span><strong id="meter-production">100%</strong></div>
+            <span class="eco-track"><i id="fill-production"></i></span>
+          </div>
+          <div class="eco-meter">
+            <div><span>Água e solo</span><strong id="meter-water">100%</strong></div>
+            <span class="eco-track"><i id="fill-water"></i></span>
+          </div>
+          <div class="eco-meter">
+            <div><span>Biodiversidade</span><strong id="meter-biodiversity">100%</strong></div>
+            <span class="eco-track"><i id="fill-biodiversity"></i></span>
+          </div>
+          <div class="eco-meter">
+            <div><span>Vínculo comunitário</span><strong id="meter-community">100%</strong></div>
+            <span class="eco-track"><i id="fill-community"></i></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="technical-sheet" id="conexao" aria-labelledby="titulo-importancia">
+      <div class="section-label">Ficha técnica</div>
+      <div class="sheet-intro">
+        <h2 id="titulo-importancia">Abelhas são pequenas, mas sustentam grandes conexões.</h2>
+        <p>As abelhas contribuem para a polinização de diversas plantas, ajudando na reprodução vegetal, na biodiversidade e na produção de alimentos. Na agricultura, a presença de polinizadores pode melhorar a formação de frutos, sementes e a qualidade de alguns cultivos.</p>
+      </div>
+      <dl class="pollinator-file">
+        <div>
+          <dt>Função principal</dt>
+          <dd>Polinização</dd>
+        </div>
+        <div>
+          <dt>Relação com agricultura</dt>
+          <dd>Melhora a reprodução de plantas</dd>
+        </div>
+        <div>
+          <dt>Relação com preservação</dt>
+          <dd>Depende de flores, água limpa e abrigo</dd>
+        </div>
+        <div>
+          <dt>Riscos</dt>
+          <dd>Perda de habitat, venenos, queimadas e desequilíbrio ambiental</dd>
+        </div>
+        <div>
+          <dt>Benefícios</dt>
+          <dd>Produção, biodiversidade e equilíbrio ecológico</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="connected-system" aria-labelledby="titulo-sistema">
+      <div>
+        <div class="section-label">Sistema conectado</div>
+        <h2 id="titulo-sistema">Quando a colmeia entra no planejamento da propriedade.</h2>
+        <p>A apicultura integrada acontece quando a criação de abelhas é pensada junto com a produção agrícola e a preservação ambiental. Isso envolve instalação responsável de colmeias, cuidado com o uso de defensivos, manutenção de áreas floridas, proteção de nascentes, preservação de mata nativa e diálogo entre agricultores e apicultores.</p>
+      </div>
+      <div class="axis-board" aria-label="Diagrama de apicultura, agricultura e preservação">
+        <article class="axis axis-bee">
+          <h3>Apicultura</h3>
+          <ul>
+            <li>Colmeias bem manejadas</li>
+            <li>Produção de mel</li>
+            <li>Cuidado com enxames</li>
+            <li>Saúde das abelhas</li>
+          </ul>
+        </article>
+        <article class="axis axis-field">
+          <h3>Agricultura</h3>
+          <ul>
+            <li>Cultivos beneficiados por polinização</li>
+            <li>Planejamento de floradas</li>
+            <li>Redução de riscos para polinizadores</li>
+            <li>Produção mais equilibrada</li>
+          </ul>
+        </article>
+        <article class="axis axis-forest">
+          <h3>Preservação</h3>
+          <ul>
+            <li>Vegetação nativa</li>
+            <li>Corredores floridos</li>
+            <li>Água limpa</li>
+            <li>Abrigo para polinizadores</li>
+            <li>Biodiversidade</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="risk-zone" id="riscos" aria-labelledby="titulo-riscos">
+      <div class="section-label">Mapa de alerta</div>
+      <h2 id="titulo-riscos">O problema começa quando a produção ignora a vida ao redor.</h2>
+      <div class="risk-radar">
+        <article><strong>Defensivos incorretos</strong><span>Aplicações sem orientação podem atingir flores, água e colmeias.</span></article>
+        <article><strong>Desmatamento</strong><span>Retira abrigo, alimento e corredores de deslocamento.</span></article>
+        <article><strong>Queimadas</strong><span>Destroem floradas, ninhos e organismos do solo.</span></article>
+        <article><strong>Falta de flores</strong><span>Reduz alimento em épocas importantes do ano.</span></article>
+        <article><strong>Água contaminada</strong><span>Afeta abelhas, plantas, animais e pessoas.</span></article>
+        <article><strong>Monocultura sem refúgio</strong><span>Diminui diversidade e aumenta dependência de manejo intensivo.</span></article>
+        <article><strong>Perda de habitat</strong><span>Enfraquece a presença de polinizadores nativos.</span></article>
+        <article><strong>Manejo inadequado</strong><span>Colmeias mal posicionadas ficam mais vulneráveis.</span></article>
+        <article><strong>Falta de diálogo</strong><span>Produtor e apicultor deixam de prevenir danos.</span></article>
+      </div>
+    </section>
+
+    <section class="pollination-path" id="polinizacao" aria-labelledby="titulo-polinizacao">
+      <div class="section-label">Trilha da polinização</div>
+      <h2 id="titulo-polinizacao">Da flor ao alimento, cada etapa depende de equilíbrio.</h2>
+      <ol class="path-line">
+        <li><span>1</span>Flor disponível</li>
+        <li><span>2</span>Abelha visita a flor</li>
+        <li><span>3</span>Transporte de pólen</li>
+        <li><span>4</span>Fecundação da planta</li>
+        <li><span>5</span>Formação de frutos e sementes</li>
+        <li><span>6</span>Produção agrícola fortalecida</li>
+        <li><span>7</span>Biodiversidade mantida</li>
+      </ol>
+    </section>
+
+    <section class="manual" id="manual" aria-labelledby="titulo-manual">
+      <div class="section-label">Manual de convivência</div>
+      <h2 id="titulo-manual">Manual rápido de convivência entre lavoura e colmeia</h2>
+      <div class="accordion" id="manual-accordion"></div>
+    </section>
+
+    <section class="community" aria-labelledby="titulo-comunidade">
+      <div class="section-label">Escola e comunidade</div>
+      <h2 id="titulo-comunidade">Preservar polinizadores também é uma tarefa da comunidade.</h2>
+      <div class="community-layout">
+        <article>
+          <h3>Escola</h3>
+          <p>Estudar polinização, criar jardim de flores, observar insetos polinizadores e desenvolver campanhas educativas.</p>
+        </article>
+        <article>
+          <h3>Agricultura</h3>
+          <p>Planejar manejo, proteger água e solo, preservar floradas e integrar apicultura à produção.</p>
+        </article>
+        <article>
+          <h3>Comunidade</h3>
+          <p>Valorizar mel e alimentos locais, evitar queimadas, proteger áreas verdes e apoiar práticas sustentáveis.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="manifesto" aria-labelledby="titulo-manifesto">
+      <h2 id="titulo-manifesto">Produzir preservando é manter o campo vivo.</h2>
+      <p>Integrar apicultura, agricultura e preservação é reconhecer que a produção depende da vida ao redor. Abelhas, plantas, água, solo e pessoas fazem parte de um mesmo sistema. Quando esse sistema é cuidado, o alimento, a biodiversidade e o futuro se fortalecem juntos.</p>
+      <a class="button primary" href="#ecossistema">Voltar ao ecossistema</a>
+    </section>
+  </main>
+
+  <footer class="project-file" id="projeto">
+    <h2>Ficha do projeto</h2>
+    <dl>
+      <div><dt>Tema</dt><dd>Apicultura integrada à agricultura e preservação</dd></div>
+      <div><dt>Nome</dt><dd>Daniel Nadalin</dd></div>
+      <div><dt>Turma</dt><dd>3 ano E</dd></div>
+      <div><dt>Escola</dt><dd>Colégio Estadual Padre Cláudio Morelli</dd></div>
+      <div><dt>Professor(a)</dt><dd>Rafael dos Santos Biano</dd></div>
+      <div><dt>Ano</dt><dd>2026</dd></div>
+    </dl>
+    <p>© 2026 — Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
