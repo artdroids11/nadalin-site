@@ -39,9 +39,7 @@ Os textos são autorais. A imagem do mapa simbólico em SVG é própria e foi cr
 
 ## Dados do projeto
 Nome: Daniel Nadalin
-Turma: 3 ano ``
-Escola: Colégio Estadual Padre Cláudio Morelli
-Professor(a): Rafael dos Santos Biano
+Turma: 3 ano E
 
 ## Copyright
 © 2026 — Todos os direitos reservados.

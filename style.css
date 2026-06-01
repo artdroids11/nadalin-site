@@ -147,7 +147,7 @@ a.button {
 }
 
 main > section,
-.project-file {
+.site-footer {
   padding: clamp(60px, 8vw, 112px) clamp(16px, 5vw, 72px);
 }
 
@@ -769,8 +769,7 @@ h3 {
   background: linear-gradient(135deg, rgba(201, 143, 45, .14), rgba(36, 67, 50, .08));
 }
 
-.pollinator-file div,
-.project-file dl div {
+.pollinator-file div {
   display: grid;
   grid-template-columns: minmax(130px, .45fr) 1fr;
   gap: 18px;
@@ -1002,18 +1001,29 @@ dd {
     repeating-linear-gradient(120deg, transparent 0 32px, rgba(246, 237, 215, .08) 32px 34px);
 }
 
-.project-file {
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--cream);
   color: var(--graphite);
 }
 
-.project-file h2 {
-  color: var(--soil);
+.footer-copyright {
+  display: flex;
+  min-height: 150px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #4f463c;
+  font-size: clamp(.95rem, 2vw, 1.05rem);
+  line-height: 1.45;
+  text-align: center;
 }
 
-.project-file dl {
-  max-width: 900px;
-  margin: 0 0 28px;
+.footer-copyright p {
+  margin: 0;
 }
 
 .accessibility-panel {
@@ -1082,7 +1092,7 @@ dd {
   }
 
   main > section,
-  .project-file {
+  .site-footer {
     padding: 48px 16px;
   }
 
@@ -1120,8 +1130,7 @@ dd {
     clip-path: none;
   }
 
-  .pollinator-file div,
-  .project-file dl div {
+  .pollinator-file div {
     grid-template-columns: 1fr;
     gap: 4px;
   }
