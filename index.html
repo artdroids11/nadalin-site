@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Missão Órbita: jornada interativa em que o produtor rural usa alertas de satélite para tomar decisões sustentáveis ao longo do ano.">
+  <title>Missão Órbita</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header" id="inicio">
+    <a class="brand" href="#inicio" aria-label="Missão Órbita, voltar ao início">
+      <span class="brand-orbit" aria-hidden="true"></span>
+      <span>
+        <strong>MISSÃO ÓRBITA</strong>
+        <small>Informação vista do espaço, decisões tomadas no campo.</small>
+      </span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="main-menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="main-nav" id="main-menu" aria-label="Menu principal">
+      <a href="#missao">Missão</a>
+      <a href="#jornada">Jornada</a>
+      <a href="#imagem">Imagem orbital</a>
+      <a href="#aprendizado">Aprendizado</a>
+      <a href="#ficha">Ficha técnica</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="titulo-abertura">
+      <div class="hero-scene" aria-hidden="true">
+        <div class="sky-orbit"></div>
+        <div class="satellite">
+          <span class="solar-panel"></span>
+          <span class="satellite-body"></span>
+          <span class="solar-panel"></span>
+        </div>
+        <div class="signal-rain">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="living-field">
+          <i class="river"></i>
+          <i class="forest"></i>
+          <i class="crop"></i>
+          <i class="house"></i>
+        </div>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Experiência interativa</p>
+        <h1 id="titulo-abertura">Você é o produtor. O satélite acabou de enviar o primeiro alerta da safra.</h1>
+        <p>Em Missão Órbita, cada imagem recebida do espaço revela uma situação real da propriedade. Sua tarefa é decidir o que fazer sem perder de vista produção, água, biodiversidade e preservação.</p>
+        <a class="button primary" href="#jornada">Iniciar missão</a>
+      </div>
+    </section>
+
+    <section class="mission-brief" id="missao" aria-labelledby="titulo-missao">
+      <div class="brief-copy">
+        <p class="eyebrow">Papel do visitante</p>
+        <h2 id="titulo-missao">A tecnologia não decide por você. Ela mostra o que antes ficava invisível.</h2>
+        <p>Satélites acompanham vigor da vegetação, calor do solo, presença de água, avanço de áreas produtivas e sinais de risco ambiental. O aplicativo transforma essas leituras em alertas, mas a decisão final nasce no campo.</p>
+      </div>
+      <ol class="mission-path" aria-label="Como a missão funciona">
+        <li><span>1</span>Receba uma imagem orbital</li>
+        <li><span>2</span>Leia o alerta do aplicativo</li>
+        <li><span>3</span>Escolha uma ação rural</li>
+        <li><span>4</span>Veja as consequências</li>
+        <li><span>5</span>Feche a safra com equilíbrio</li>
+      </ol>
+    </section>
+
+    <section class="journey" id="jornada" aria-labelledby="titulo-jornada">
+      <div class="journey-heading">
+        <p class="eyebrow">Ano agrícola simulado</p>
+        <h2 id="titulo-jornada">Quatro passagens do satélite. Quatro decisões que mudam a propriedade.</h2>
+      </div>
+
+      <div class="mission-board">
+        <article class="transmission" aria-live="polite">
+          <div class="transmission-top">
+            <span id="mission-step">Passagem 1 de 4</span>
+            <strong id="mission-season">Início das chuvas</strong>
+          </div>
+          <h3 id="mission-title">O solo acordou antes da lavoura</h3>
+          <p id="mission-alert">A imagem mostra boa umidade no centro da propriedade, mas a área próxima ao rio está com vegetação baixa e solo exposto.</p>
+          <div class="satellite-note">
+            <span>Leitura orbital</span>
+            <p id="mission-reading">Vegetação: irregular | Água: estável | Risco: erosão na margem</p>
+          </div>
+        </article>
+
+        <div class="farm-portrait" id="farm-portrait" aria-label="Representação visual da propriedade durante a missão">
+          <span class="portrait-scan" aria-hidden="true"></span>
+          <span class="plot plot-crop" aria-hidden="true"></span>
+          <span class="plot plot-water" aria-hidden="true"></span>
+          <span class="plot plot-forest" aria-hidden="true"></span>
+          <span class="plot plot-risk" aria-hidden="true"></span>
+          <span class="plot plot-home" aria-hidden="true"></span>
+        </div>
+
+        <div class="choice-panel">
+          <p class="eyebrow">Sua decisão</p>
+          <div class="choices" id="choices" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <div class="impact-area">
+        <article class="result-box" aria-live="polite">
+          <p class="eyebrow">Consequência</p>
+          <h3 id="result-title">A missão está pronta para começar.</h3>
+          <p id="result-text">Escolha uma ação para ver como tecnologia e decisão humana alteram a safra.</p>
+          <button class="button secondary" id="next-step" type="button" disabled>Próxima passagem</button>
+        </article>
+
+        <div class="meters" aria-label="Indicadores da propriedade">
+          <div class="meter">
+            <span>Produção</span>
+            <strong id="production-value">60</strong>
+            <i><b id="production-fill"></b></i>
+          </div>
+          <div class="meter">
+            <span>Preservação</span>
+            <strong id="preservation-value">60</strong>
+            <i><b id="preservation-fill"></b></i>
+          </div>
+          <div class="meter">
+            <span>Água</span>
+            <strong id="water-value">60</strong>
+            <i><b id="water-fill"></b></i>
+          </div>
+          <div class="meter">
+            <span>Biodiversidade</span>
+            <strong id="biodiversity-value">60</strong>
+            <i><b id="biodiversity-fill"></b></i>
+          </div>
+          <div class="meter">
+            <span>Sustentabilidade</span>
+            <strong id="sustainability-value">60</strong>
+            <i><b id="sustainability-fill"></b></i>
+          </div>
+        </div>
+      </div>
+
+      <article class="field-diary" aria-live="polite">
+        <p class="eyebrow">Diário da safra</p>
+        <ol id="history-list">
+          <li>O aplicativo está aguardando sua primeira decisão.</li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="image-lab" id="imagem" aria-labelledby="titulo-imagem">
+      <div class="image-copy">
+        <p class="eyebrow">Decifrando a imagem</p>
+        <h2 id="titulo-imagem">O satélite não entrega uma resposta pronta. Ele entrega pistas.</h2>
+        <p>Ative as camadas para perceber como uma mesma área pode revelar histórias diferentes: água escassa, calor no solo, vegetação em recuperação ou pressão sobre áreas naturais.</p>
+      </div>
+      <div class="orbital-reader">
+        <div class="orbital-image" id="orbital-image" aria-label="Imagem orbital estilizada com camadas alternáveis">
+          <span class="reader-scan" aria-hidden="true"></span>
+          <span class="layer layer-vegetation" data-layer="vegetation"></span>
+          <span class="layer layer-water" data-layer="water"></span>
+          <span class="layer layer-temperature" data-layer="temperature"></span>
+          <span class="layer layer-biodiversity" data-layer="biodiversity"></span>
+        </div>
+        <div class="layer-switches" id="layer-switches" aria-label="Camadas da imagem orbital">
+          <label><input type="checkbox" value="vegetation" checked> Vegetação</label>
+          <label><input type="checkbox" value="water" checked> Água</label>
+          <label><input type="checkbox" value="temperature"> Temperatura do solo</label>
+          <label><input type="checkbox" value="biodiversity"> Biodiversidade</label>
+        </div>
+      </div>
+    </section>
+
+    <section class="learning" id="aprendizado" aria-labelledby="titulo-aprendizado">
+      <p class="eyebrow">Aprendizado da missão</p>
+      <h2 id="titulo-aprendizado">A melhor decisão não é a mais rápida. É a que enxerga o sistema inteiro.</h2>
+      <div class="learning-grid">
+        <article>
+          <span>Produção</span>
+          <p>Satélites ajudam a identificar falhas antes que elas virem perda de safra.</p>
+        </article>
+        <article>
+          <span>Água</span>
+          <p>Alertas de umidade e calor evitam irrigação no escuro e reduzem desperdícios.</p>
+        </article>
+        <article>
+          <span>Preservação</span>
+          <p>Imagens recorrentes mostram quando nascentes, mata e solo precisam de proteção.</p>
+        </article>
+        <article>
+          <span>Biodiversidade</span>
+          <p>Áreas naturais conectadas tornam a propriedade mais resistente ao clima.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="ficha">
+    <div>
+      <p class="eyebrow">Ficha técnica</p>
+      <strong>EDUARDO MATHEUS NIKELE</strong>
+      <span>Projeto: Missão Órbita | Tema: Satélites e Apps para Orientação ao Produtor Rural</span>
+    </div>
+    <p>Copyright © 2026 - EDUARDO MATHEUS NIKELE. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
