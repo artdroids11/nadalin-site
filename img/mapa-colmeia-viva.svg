@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" role="img" aria-labelledby="title desc">
+  <title id="title">Mapa simbólico da Colmeia Viva</title>
+  <desc id="desc">Colmeia, lavoura e área preservada conectadas por linhas de polinização.</desc>
+  <rect width="920" height="620" fill="#223033"/>
+  <path d="M80 500 C220 360 355 560 500 410 S735 260 850 360" fill="none" stroke="#78908a" stroke-width="16" opacity=".25"/>
+  <path d="M92 498 C232 358 350 528 492 392 S710 252 838 340" fill="none" stroke="#c58b2d" stroke-width="4" stroke-dasharray="16 18"/>
+  <g opacity=".16" stroke="#f0d9a3">
+    <path d="M48 88h824M48 178h824M48 268h824M48 358h824M48 448h824"/>
+    <path d="M142 42v530M282 42v530M422 42v530M562 42v530M702 42v530"/>
+  </g>
+  <g transform="translate(115 130)">
+    <polygon points="70,0 140,40 140,120 70,160 0,120 0,40" fill="#402e24" stroke="#d39b38" stroke-width="6"/>
+    <polygon points="70,34 108,56 108,100 70,122 32,100 32,56" fill="#d39b38"/>
+    <circle cx="70" cy="78" r="22" fill="#223033"/>
+    <text x="70" y="205" fill="#f6edd7" font-family="Arial, sans-serif" font-size="30" text-anchor="middle">Colmeia</text>
+  </g>
+  <g transform="translate(390 295)">
+    <rect x="0" y="0" width="230" height="150" rx="18" fill="#2f4a35" stroke="#8aa66e" stroke-width="6"/>
+    <path d="M24 35h182M24 72h182M24 109h182" stroke="#f0d9a3" stroke-width="8" stroke-linecap="round"/>
+    <path d="M58 22v108M116 22v108M174 22v108" stroke="#c58b2d" stroke-width="5" stroke-linecap="round"/>
+    <text x="115" y="200" fill="#f6edd7" font-family="Arial, sans-serif" font-size="30" text-anchor="middle">Lavoura</text>
+  </g>
+  <g transform="translate(658 92)">
+    <circle cx="93" cy="92" r="92" fill="#263c32" stroke="#7fa36a" stroke-width="6"/>
+    <path d="M52 116C38 78 65 48 94 36c27 13 52 43 39 81-23-12-51-13-81-1z" fill="#7fa36a"/>
+    <path d="M94 36v126M56 94c36-12 58-9 76 0" stroke="#f6edd7" stroke-width="5" stroke-linecap="round"/>
+    <text x="93" y="225" fill="#f6edd7" font-family="Arial, sans-serif" font-size="30" text-anchor="middle">Área preservada</text>
+  </g>
+  <g fill="#f6edd7">
+    <circle cx="280" cy="310" r="7"/>
+    <circle cx="334" cy="348" r="5"/>
+    <circle cx="640" cy="276" r="6"/>
+    <circle cx="702" cy="258" r="5"/>
+  </g>
+</svg>
